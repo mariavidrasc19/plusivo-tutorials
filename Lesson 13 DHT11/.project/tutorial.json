@@ -1,0 +1,7 @@
+{
+	"title": "DHT11",
+	"board": "ESP8266",
+	"type": "esp",
+	"language": "micropython",
+	"description": "Description first tutorial!!"      
+}

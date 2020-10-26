@@ -1,0 +1,7 @@
+{
+	"title": "Buzzer and Digital Inputs",
+	"board": "ESP8266",
+	"type": "esp",
+	"language": "micropython",
+	"description": "Description first tutorial!!"      
+}
