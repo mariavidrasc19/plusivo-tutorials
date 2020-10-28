@@ -3,5 +3,5 @@
 	"board": "ESP8266",
 	"type": "esp",
 	"language": "micropython",
-	"description": "Description first tutorial!!"      
+	"description": "In this lesson, you are going to learn how to use a push button as a digital input to turn an LED on and off."      
 }

@@ -3,5 +3,5 @@
 	"board": "ESP8266",
 	"type": "esp",
 	"language": "micropython",
-	"description": "Description first tutorial!!"      
+	"description": "In this lesson you will learn how to control the brightness of RGB LEDs. It consists of 3 LEDs Red, Green and Blue and using these 3 colours, you can create almost any colour."      
 }

@@ -3,5 +3,5 @@
 	"board": "ESP8266",
 	"type": "esp",
 	"language": "micropython",
-	"description": "Description first tutorial!!"      
+	"description": "In this lesson, you will learn how to connect and use a buzzer along with a push button as a digital input."      
 }
