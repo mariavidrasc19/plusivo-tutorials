@@ -3,5 +3,5 @@
 	"board": "ESP8266",
 	"type": "esp",
 	"language": "micropython",
-	"description": "Description first tutorial!!"      
+	"description": "In this lesson you will learn how to use the ultrasonic module in order to calculate the distance from 2 centimeters and up to 4 meters."      
 }

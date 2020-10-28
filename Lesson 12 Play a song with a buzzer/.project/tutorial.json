@@ -3,5 +3,5 @@
 	"board": "ESP8266",
 	"type": "wyapp",
 	"language": "python",
-	"description": "Description first tutorial!!"      
+	"description": "In this lesson you will learn how to play songs using the buzzer. If you are more talented, you can write more complicated songs."      
 }
