@@ -1,7 +1,7 @@
 {
 	"title": "Buzzer and Digital Inputs",
-	"board": "ESP8266",
-	"type": "esp",
-	"language": "micropython",
+	"board": "esp8266",
+	"type": "mp",
+	"language": "python",
 	"description": "In this lesson, you will learn how to connect and use a buzzer along with a push button as a digital input."      
 }

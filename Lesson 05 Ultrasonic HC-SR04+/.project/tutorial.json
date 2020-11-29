@@ -1,7 +1,7 @@
 {
 	"title": "Ultrasonic HC-SR04+",
-	"board": "ESP8266",
-	"type": "esp",
-	"language": "micropython",
+	"board": "esp8266",
+	"type": "mp",
+	"language": "python",
 	"description": "In this lesson you will learn how to use the ultrasonic module in order to calculate the distance from 2 centimeters and up to 4 meters."      
 }

@@ -1,7 +1,7 @@
 {
 	"title": "Blink an LED",
-	"board": "ESP8266",
-	"type": "esp",
-	"language": "micropython",
+	"board": "esp8266",
+	"type": "mp",
+	"language": "python",
 	"description": "In this lesson you will learn how to use a breadbord, how to place components on it and how to control an LED."      
 }

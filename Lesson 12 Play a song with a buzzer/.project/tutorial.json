@@ -1,7 +1,7 @@
 {
 	"title": "Play a song with a buzzer",
-	"board": "ESP8266",
-	"type": "wyapp",
+	"board": "esp8266",
+	"type": "mp",
 	"language": "python",
 	"description": "In this lesson you will learn how to play songs using the buzzer. If you are more talented, you can write more complicated songs."      
 }

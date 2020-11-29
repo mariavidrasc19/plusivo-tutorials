@@ -1,7 +1,7 @@
 {
 	"title": "DHT11",
-	"board": "ESP8266",
-	"type": "esp",
-	"language": "micropython",
+	"board": "esp8266",
+	"type": "mp",
+	"language": "python",
 	"description": "In this lesson you will learn how to use a DHT11 sensor to check the temperature and humidity in a room."      
 }
