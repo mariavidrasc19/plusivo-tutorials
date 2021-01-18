@@ -3,5 +3,5 @@
 	"board": "raspberrypi",
 	"type": "wyapp",
 	"language": "python",
-	"description": "In this lesson you will learn how to create an octave from a piano and play different sounds on the buzzer."      
+	"description": "In this lesson you will learn how to create an octave from a piano and play different sounds on the buzzer. "      
 }
