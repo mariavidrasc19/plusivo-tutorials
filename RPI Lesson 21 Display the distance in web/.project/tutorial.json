@@ -1,0 +1,7 @@
+{
+	"title": "Display the distance in web",
+	"board": "raspberrypi",
+	"type": "wyapp",
+	"language": "python",
+	"description": "This lesson is similar to the lesson Ultrasonic HC-SR04+ and learn to display the distance on a web page hosted by the development board."      
+}

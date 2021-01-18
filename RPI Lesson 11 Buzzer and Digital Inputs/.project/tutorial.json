@@ -1,0 +1,7 @@
+{
+	"title": "Buzzer and Ultrasonic",
+	"board": "raspberrypi",
+	"type": "wyapp",
+	"language": "python",
+	"description": "In this lesson you In this lesson you will learn how to connect and use a buzzer."      
+}

@@ -1,0 +1,7 @@
+{
+	"title": "Buzzer",
+	"board": "raspberrypi",
+	"type": "wyapp",
+	"language": "python",
+	"description": "In this lesson you will learn how to connect and use a buzzer."      
+}

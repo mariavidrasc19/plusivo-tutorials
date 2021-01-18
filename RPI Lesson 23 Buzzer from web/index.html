@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.1.0/css/all.css'/>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css'/>
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+    <title>Buzzer</title>
+    <style>
+      .css_on
+      {
+        color: black;
+      }
+      .css_off
+      {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid text-center">
+      <div class="row text-center">
+        <div class="col-sm-12" style="color:red;font-size:7vh">
+          <p>Click/touch the button.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <input type="button" class="btn btn-primary" id="id_button" value="Off" style="font-size:7vh">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-12">
+          <i id="speaker" class="fas fa-volume-up css_off" style="font-size:15vh"></i>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function(){
+        $('#id_button').click(function(){
+          var current_state = $('#speaker').hasClass('css_off');
+
+          if(current_state == true)
+          {
+            $.ajax({
+              url:'/buzzer_function',
+              type:'POST',
+              data:{state:'On'},
+            });
+            $('#id_button').val('On');
+            $('#speaker').removeClass('css_off').addClass('css_on');
+          }
+          else {
+            $.ajax({
+              url:'/buzzer_function',
+              type:'POST',
+              data:{state:'Off'},
+            });
+            $('#id_button').val('Off');
+            $('#speaker').removeClass('css_on').addClass('css_off');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

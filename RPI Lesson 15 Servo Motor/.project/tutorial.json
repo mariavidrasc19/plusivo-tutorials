@@ -1,0 +1,7 @@
+{
+	"title": "Servo Motor",
+	"board": "raspberrypi",
+	"type": "wyapp",
+	"language": "python",
+	"description": "In this lesson you are going to learn how to control a servo."      
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>DC Motor</title>
+  </head>
+
+  <body>
+      <div class="container-fluid" style="font-size:10vh;color:red">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <h1 id="status">Control App</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <i id="button-forward" class="fas fa-chevron-circle-up"></i>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <i id="button-backward" class="fas fa-chevron-circle-down"></i>
+          </div>
+        </div>
+
+        <div class="row" style="height:10vh;"> </div>
+
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <h3>Use the slider for adjusting the motorspeed</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 offset-lg-4 col-lg-4">
+            <input type="range" class="form-control-range" id="motorspeed-slider">
+          </div>
+        </div>
+
+      </div>
+
+      <script>
+        $('#motorspeed-slider').on('change',function(){
+          var variable = $('#motorspeed-slider').val();
+          $('#status').html('Speed: ' + variable + ' %');
+          $.ajax({
+            url:'/setmotorspeed',
+            type:'POST',
+            data:{motorspeed:variable},
+          });
+        });
+
+        $('#button-forward').on('touchstart mousedown', function(){
+          $('#status').html('Forward');
+          $.ajax('/forward');
+        });
+
+        $('#button-forward').on('touchend mouseup', function(){
+          $('#status').html('Stop');
+          $.ajax('/stopp');
+        });
+
+        $('#button-backward').on('touchstart mousedown', function(){
+          $('#status').html('Backward');
+          $.ajax('/backward');
+        });
+
+        $('#button-backward').on('touchend mouseup', function(){
+          $('#status').html('Stop');
+          $.ajax('/stopp');
+        });
+      </script>
+
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Dim a led</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	</head>
+
+	<body>
+		<div class="container-fluid text-center">
+			<div class="row">
+				<div class="col-sm-12" style="color:red;font-size:7vh">
+					<p>Use the slider to control the brightness.</p>
+				</div>
+			</div>
+			<br>
+			<div class="col-sm-12">
+				<input type="range" min='0' max='100' class="form-control-range", id="slider">
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<h3 id='status'></h3>
+				</div>
+			</div>
+		</div>
+		<script>
+			$('#slider').on('change', function(){
+				var state_slider = $('#slider').val();
+				$('#status').html('Brightness: ' + state_slider + ' %');
+				$.ajax({
+					url:'/led',
+					type:'POST',
+					data:{state: state_slider}
+				});
+			});
+		</script>
+	</body>
+</html>

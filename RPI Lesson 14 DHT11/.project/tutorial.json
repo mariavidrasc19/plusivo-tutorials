@@ -1,0 +1,7 @@
+{
+	"title": "DHT11",
+	"board": "raspberrypi",
+	"type": "wyapp",
+	"language": "python",
+	"description": "In this lesson you will learn how to use a DHT11 sensor to check the temperature and humidity in a room."      
+}

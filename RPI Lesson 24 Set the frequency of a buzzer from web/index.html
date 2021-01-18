@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.1.0/css/all.css'/>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css'/>
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+    <title>Buzzer control</title>
+    <style>
+      .css_on
+      {
+        color:black;
+      }
+      .css_off
+      {
+        color:lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid text-center">
+      <div class="row">
+        <div class="col-sm-12" style="color:red;font-size:7vh">
+          <p>Click/touch the button.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <input type="button" class="btn btn-primary" id="id_button" style="font-size:7vh">
+        </div>
+      </div>
+      <br>
+      <div class='row'>
+        <div  class='col-sm-12'>
+          <i id='speaker' class='fas fa-volume-up css_off' style='font-size:15vh'></i>
+        </div>
+      </div>
+      <div class='col-sm-12'>
+        <input type='range' min='31' max='6000' class='form-control-range' id='slider'/>
+      </div>
+      <div class='row'>
+        <div class='col-sm-12'>
+          <h3 id='status'></h3>
+        </div>
+      </div>
+    </div>
+
+  <script>
+    $(document).ready(refreshFunction);
+    function refreshFunction(){
+      $.getJSON('/refresh', function(result){
+        $('#slider').val(result.frequency);
+
+        if(result.state == 1)
+        {
+          $('#id_button').val('On');
+          $('#speaker').removeClass('css_off').addClass('css_on');
+        }
+        else {
+          $('#id_button').val('Off');
+          $('#speaker').removeClass('css_on').addClass('css_off');
+        }
+        $('#status').html('Frequency: ' + result.frequency + ' Hz');
+      });
+    };
+
+    $('#id_button').click(function () {
+      var current_state = $('#speaker').hasClass('css_off');
+
+      if(current_state == true)
+      {
+        $.ajax({
+          url:'/button_state',
+          type:'POST',
+          data:{state:'On'},
+        });
+        $('#id_button').val('On');
+        $('#speaker').removeClass('css_off').addClass('css_on');
+      }
+      else
+      {
+        $.ajax({
+          url:'/button_state',
+          type: 'POST',
+          data: {state: 'Off'},
+        });
+        $('#id_button').val('Off');
+        $('#speaker').removeClass('css_on').addClass('css_off');
+      }
+    });
+
+    $('#slider').on('change', function(){
+          var state_slider = $('#slider').val();
+
+          $('#status').html('Frequency: ' + state_slider + ' Hz');
+          $.ajax({
+            url: '/buzzer_frequency',
+            type: 'POST',
+            data: {sound: state_slider},
+          });
+      });
+  </script>
+  </body>
+</html>

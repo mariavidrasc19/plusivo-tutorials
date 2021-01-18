@@ -1,0 +1,7 @@
+{
+	"title": "4 Digit 7 Segment Display",
+	"board": "raspberrypi",
+	"type": "wyapp",
+	"language": "python",
+	"description": "In this lesson you will learn how to use two shift registers and how to control a 4 Digit 7 Segment with Common Cathode display."      
+}

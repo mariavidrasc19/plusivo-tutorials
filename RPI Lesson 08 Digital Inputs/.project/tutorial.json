@@ -1,0 +1,7 @@
+{
+	"title": "Control an LED using push buttons",
+	"board": "raspberrypi",
+	"type": "wyapp",
+	"language": "python",
+	"description": "In this lesson, you are going to learn how to use two push buttons to control the brightness of an LED."      
+}

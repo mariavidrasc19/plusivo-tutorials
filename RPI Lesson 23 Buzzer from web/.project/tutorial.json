@@ -1,0 +1,7 @@
+{
+	"title": "Buzzer from web",
+	"board": "raspberrypi",
+	"type": "wyapp",
+	"language": "python",
+	"description": "In this lesson you will learn how to turn On and Off a buzzer from a web browser."      
+}

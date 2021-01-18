@@ -1,0 +1,7 @@
+{
+	"title": "Digital Inputs",
+	"board": "raspberrypi",
+	"type": "wyapp",
+	"language": "python",
+	"description": "In this lesson, you are going to learn how to use a push button as a digital input to turn an LED on and off."      
+}

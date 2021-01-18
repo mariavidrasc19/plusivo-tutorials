@@ -1,0 +1,8 @@
+{
+	"title": "Ultrasonic HC-SR04+",
+	"board": "raspberrypi",
+	"type": "wyapp",
+	"language": "python",
+	"description": "In this lesson you will learn how to use the ultrasonic module in order to calculate the distance from 2 centimeters and up to 4 meters."      
+  
+}

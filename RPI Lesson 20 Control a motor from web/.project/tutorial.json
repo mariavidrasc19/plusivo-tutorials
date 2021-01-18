@@ -1,0 +1,7 @@
+{
+	"title": "Control a motor from web",
+	"board": "raspberrypi",
+	"type": "wyapp",
+	"language": "python",
+	"description": "In this lesson you will learn how to control the speed and steering of a motor from a browser."      
+}

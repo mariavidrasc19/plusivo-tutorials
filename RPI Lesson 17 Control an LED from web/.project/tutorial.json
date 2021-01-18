@@ -1,0 +1,7 @@
+{
+	"title": "Control an LED from web",
+	"board": "raspberrypi",
+	"type": "wyapp",
+	"language": "python",
+	"description": "In this lesson you will learn how to turn on or off an LED from a browser."      
+}

@@ -1,0 +1,7 @@
+{
+	"title": "Shift Register",
+	"board": "raspberrypi",
+	"type": "wyapp",
+	"language": "python",
+	"description": "In this lesson you will learn how to use a shift register to control multiple LEDs from an LED bar."      
+}

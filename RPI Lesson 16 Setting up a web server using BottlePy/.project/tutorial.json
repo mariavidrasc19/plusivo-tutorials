@@ -1,0 +1,7 @@
+{
+	"title": "Setting up a web server using BottlePy",
+	"board": "raspberrypi",
+	"type": "wyapp",
+	"language": "python",
+	"description": "During this Lesson we are going to explain how to set up a server using a python micro web-framework."      
+}

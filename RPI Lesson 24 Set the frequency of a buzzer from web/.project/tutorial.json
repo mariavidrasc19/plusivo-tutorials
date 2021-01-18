@@ -1,0 +1,7 @@
+{
+	"title": "Set the frequency of a buzzer from web",
+	"board": "raspberrypi",
+	"type": "wyapp",
+	"language": "python",
+	"description": "In this lesson you will learn how to turn On and Off a buzzer and control its frequency from a web browser."      
+}

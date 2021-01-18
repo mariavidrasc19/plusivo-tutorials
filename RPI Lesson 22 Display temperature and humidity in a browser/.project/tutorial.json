@@ -1,0 +1,7 @@
+{
+	"title": "Display temperature and humidity in a browser",
+	"board": "raspberrypi",
+	"type": "wyapp",
+	"language": "python",
+	"description": "In this lesson we are going to display in a browser the temperature and humidity, read using the DHT11 sensor."      
+}

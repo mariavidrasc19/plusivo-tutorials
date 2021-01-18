@@ -1,0 +1,7 @@
+{
+	"title": "Multiple Shift Registers",
+	"board": "raspberrypi",
+	"type": "wyapp",
+	"language": "python",
+	"description": "In this lesson you will learn how to connect multiple shift registers to the development board."      
+}

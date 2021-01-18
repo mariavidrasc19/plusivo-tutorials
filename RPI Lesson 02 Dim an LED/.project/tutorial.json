@@ -1,0 +1,7 @@
+{
+	"title": "Dim an LED",
+	"board": "raspberrypi",
+	"type": "wyapp",
+	"language": "python",
+	"description": "In this lesson you will learn how to control the brightness of an LED."  
+}

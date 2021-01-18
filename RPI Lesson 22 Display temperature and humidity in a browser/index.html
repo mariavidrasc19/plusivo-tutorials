@@ -1,0 +1,41 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>DHT11</title>
+  </head>
+  <body>
+    <h2>DHT11</h2>
+    <table style="font-size:20px">
+      <tr>
+        <td>
+          <div>Temperature: </div>
+        </td>
+        <td>
+          <div id="Temperature"> </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div>Humidity: </div>
+        </td>
+        <td>
+          <div id="Humidity"> </div>
+        </td>
+      </tr>
+    </table>
+
+    <script>
+      $(document).ready(function(){
+        setInterval(refreshFunction,300);
+      });
+
+      function refreshFunction(){
+        $.getJSON('/refresh', function(e){
+          $('#Temperature').html(e.temperature);
+          $('#Humidity').html(e.humidity);
+        });
+      }
+    </script>
+  </body>
+</html>
